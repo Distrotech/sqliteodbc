@@ -150,6 +150,7 @@ uninstall-2:
 
 install-3:	libsqlite3odbc.la @EXT_BLOBTOXY@ @EXT_IMPEXP@ \
 		@EXT_CSVTABLE@ @EXT_ZIPFILE@ @EXT_XPATH@
+		test -d $(DESTDIR)$(drvdir) || mkdir -p $(DESTDIR)$(drvdir)
 		$(LIBTOOL) --mode=install $(INSTALL) \
 		    libsqlite3odbc.la $(DESTDIR)$(drvdir)
 		test -z "@EXT_BLOBTOXY@" || \
