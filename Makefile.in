@@ -6,7 +6,7 @@ libdir =	@libdir@
 drvdir =	$(libdir)@DRVDIR@
 CC =		@CC@
 INSTALL =	@INSTALL@
-LIBTOOL =	./libtool
+LIBTOOL =	./libtool --tag=CC
 CFLAGS=		@CFLAGS@ -DDRIVER_VER_INFO=\"@VER_INFO@\" @SQLITE3_A10N_FLAGS@
 SQLITE_INC =	@SQLITE_INC@
 SQLITE_LIB =	@SQLITE_LIB@
